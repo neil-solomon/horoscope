@@ -1,0 +1,798 @@
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.mainContainer {
+  background-color: rgb(0, 0, 25);
+}
+
+.contentContainer {
+  animation: contentContainerIn 1s forwards;
+}
+
+@keyframes contentContainerIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.rotateDevice {
+  animation: rotateDevice 2s infinite;
+}
+
+@keyframes rotateDevice {
+  0% {
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+}
+
+.rotateDeviceContainer {
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.horoscopeMessageIn {
+  position: absolute;
+  left: 5vw;
+  width: 90vw;
+  height: auto;
+  color: rgb(200, 0, 255, 0.75);
+  animation: horoscopeMessageIn 1s forwards;
+}
+
+@keyframes horoscopeMessageIn {
+  0% {
+    opacity: 0;
+    top: 61vh;
+  }
+  100% {
+    opacity: 1;
+    top: 60vh;
+  }
+}
+
+.horoscopeMessageOut {
+  position: absolute;
+  left: 5vw;
+  width: 90vw;
+  height: auto;
+  color: rgb(200, 0, 255, 0.75);
+  animation: horoscopeMessageOut 1s forwards;
+}
+
+@keyframes horoscopeMessageOut {
+  0% {
+    opacity: 1;
+    top: 60vh;
+  }
+  100% {
+    opacity: 0;
+    top: 61vh;
+  }
+}
+
+.symbols {
+  width: 100vw;
+  z-index: 1;
+  position: absolute;
+  top: 5vh;
+}
+
+.symbol {
+  display: inline-block;
+  fill: rgb(100, 0, 100, 0.75);
+  color: rgb(125, 0, 125, 0.75);
+}
+
+.symbolHoverIn {
+  display: inline-block;
+  animation: symbolHoverIn 0.5s forwards;
+}
+
+@keyframes symbolHoverIn {
+  from {
+    fill: rgb(100, 0, 100, 0.75);
+    color: rgb(125, 0, 125, 0.75);
+  }
+  to {
+    fill: rgb(150, 0, 150, 0.75);
+    color: rgb(175, 0, 175, 0.75);
+  }
+}
+
+.symbolHoverOut {
+  display: inline-block;
+  animation: symbolHoverOut 0.5s forwards;
+}
+
+@keyframes symbolHoverOut {
+  from {
+    fill: rgb(150, 0, 150, 0.75);
+    color: rgb(175, 0, 175, 0.75);
+  }
+  to {
+    fill: rgb(100, 0, 100, 0.75);
+    color: rgb(125, 0, 125, 0.75);
+  }
+}
+
+.symbolClick {
+  display: inline-block;
+  animation: symbolClick 1s forwards;
+}
+
+@keyframes symbolClick {
+  from {
+    fill: rgb(150, 0, 150, 0.75);
+    color: rgb(175, 0, 175, 0.75);
+  }
+  to {
+    fill: rgb(150, 0, 200, 1);
+    color: rgb(175, 0, 225, 1);
+  }
+}
+
+.symbolUnclick {
+  display: inline-block;
+  animation: symbolUnclick 1s forwards;
+}
+
+@keyframes symbolUnclick {
+  from {
+    fill: rgb(150, 0, 200, 1);
+    color: rgb(175, 0, 225, 1);
+  }
+  to {
+    fill: rgb(150, 0, 150, 0.75);
+    color: rgb(175, 0, 175, 0.75);
+  }
+}
+
+.galaxy {
+  height: 120vh;
+  width: 100vw;
+  background-color: rgb(0, 0, 25);
+  /* background-image: linear-gradient(
+    rgb(0, 0, 25),
+    rgb(0, 0, 25),
+    rgb(0, 0, 25),
+    rgb(0, 0, 50),
+    rgb(50, 0, 50),
+    rgb(0, 0, 50),
+    rgb(0, 0, 25),
+    rgb(0, 0, 25),
+    rgb(0, 0, 25),
+    rgb(0, 0, 25),
+    rgb(0, 0, 25),
+    rgb(0, 0, 25)
+  ); */
+}
+
+.fadeLeft {
+  z-index: 2;
+  position: absolute;
+  top: 0vh;
+  left: 0vw;
+  width: 5vw;
+  height: 120vh;
+  background: linear-gradient(to right, rgb(0, 0, 25, 1), rgb(0, 0, 25, 0));
+}
+
+.fadeRight {
+  z-index: 2;
+  position: absolute;
+  top: 0vh;
+  left: 95vw;
+  width: 5vw;
+  height: 120vh;
+  background: linear-gradient(to right, rgb(0, 0, 25, 0), rgb(0, 0, 25, 1));
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.galacticCore {
+  z-index: 1;
+  background-image: radial-gradient(rgb(150, 150, 100), rgb(100, 100, 75));
+  border-radius: 100%;
+  box-shadow: 0px 0px 15px rgb(255, 255, 200);
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  top: calc(50vh - 5px);
+  left: calc(50vw - 5px);
+}
+
+.smallStar {
+  height: 1px;
+  width: 1px;
+  position: relative;
+  top: 10px;
+  left: 10px;
+  border-radius: 100%;
+  background-color: rgb(200, 200, 255, 0.5);
+  box-shadow: 0px 0px 1.5px rgb(200, 200, 255, 0.5);
+}
+
+.smallStarGlow {
+  height: 1px;
+  width: 1px;
+  position: relative;
+  top: 10px;
+  left: 10px;
+  border-radius: 100%;
+  animation: smallStarGlow 2s;
+}
+
+@keyframes smallStarGlow {
+  0% {
+    background-color: rgb(200, 200, 255, 0.5);
+    box-shadow: 0px 0px 1.5px rgb(200, 200, 255, 0.5);
+  }
+  25% {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 1.5px rgb(255, 255, 255);
+  }
+  100% {
+    background-color: rgb(200, 200, 255, 0.5);
+    box-shadow: 0px 0px 1.5px rgb(200, 200, 255, 0.5);
+  }
+}
+
+.constellation {
+  opacity: 0;
+  height: 5px;
+  width: 5px;
+  position: absolute;
+  border-radius: 100%;
+  background-color: rgb(200, 200, 255);
+  box-shadow: 0px 0px 7.5px rgb(255, 255, 255, 1);
+}
+
+.constellationOn {
+  height: 5px;
+  width: 5px;
+  position: absolute;
+  border-radius: 100%;
+  background-color: rgb(200, 200, 255);
+  box-shadow: 0px 0px 7.5px rgb(255, 255, 255, 1);
+  animation: constellationOn 2s forwards;
+}
+
+@keyframes constellationOn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.constellationOff {
+  height: 5px;
+  width: 5px;
+  position: absolute;
+  border-radius: 100%;
+  background-color: rgb(200, 200, 255);
+  box-shadow: 0px 0px 7.5px rgb(255, 255, 255, 1);
+  animation: constellationOff 2s forwards;
+}
+
+@keyframes constellationOff {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.footer {
+  color: rgb(100, 0, 100, 1);
+  position: absolute;
+  top: 100vh;
+  width: 100vw;
+  text-align: center;
+}
+
+.shineStar1 {
+  position: absolute;
+  height: 2px;
+  width: 2px;
+  border-radius: 100%;
+  box-shadow: 0px 0px 3px rgb(200, 200, 255);
+  animation: shineStar1 20s infinite;
+  animation-timing-function: linear;
+}
+@keyframes shineStar1 {
+  0% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+  2.5% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+  7.5% {
+    background-color: rgb(255, 255, 255);
+    opacity: 1;
+  }
+  12.5% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+  100% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+}
+
+.shineStar2 {
+  position: absolute;
+  height: 2px;
+  width: 2px;
+  border-radius: 100%;
+  box-shadow: 0px 0px 3px rgb(200, 200, 255);
+  animation: shineStar2 20s infinite;
+  animation-timing-function: linear;
+}
+@keyframes shineStar2 {
+  0% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+  7.5% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+  12.5% {
+    background-color: rgb(255, 255, 255);
+    opacity: 1;
+  }
+  17.5% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+  100% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+}
+
+.shineStar3 {
+  position: absolute;
+  height: 2px;
+  width: 2px;
+  border-radius: 100%;
+  box-shadow: 0px 0px 3px rgb(200, 200, 255);
+  animation: shineStar3 20s infinite;
+  animation-timing-function: linear;
+}
+@keyframes shineStar3 {
+  0% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+  15% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+  20% {
+    background-color: rgb(255, 255, 255);
+    opacity: 1;
+  }
+  25% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+  100% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+}
+
+.shineStar4 {
+  position: absolute;
+  height: 2px;
+  width: 2px;
+  border-radius: 100%;
+  box-shadow: 0px 0px 3px rgb(200, 200, 255);
+  animation: shineStar4 20s infinite;
+  animation-timing-function: linear;
+}
+@keyframes shineStar4 {
+  0% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+  25% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+  30% {
+    background-color: rgb(255, 255, 255);
+    opacity: 1;
+  }
+  35% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+  100% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+}
+
+.shineStar5 {
+  position: absolute;
+  height: 2px;
+  width: 2px;
+  border-radius: 100%;
+  box-shadow: 0px 0px 3px rgb(200, 200, 255);
+  animation: shineStar5 20s infinite;
+  animation-timing-function: linear;
+}
+@keyframes shineStar5 {
+  0% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+  40% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+  45% {
+    background-color: rgb(255, 255, 255);
+    opacity: 1;
+  }
+  47.5% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+  100% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+}
+
+.shineStar6 {
+  position: absolute;
+  height: 2px;
+  width: 2px;
+  border-radius: 100%;
+  box-shadow: 0px 0px 3px rgb(200, 200, 255);
+  animation: shineStar6 20s infinite;
+  animation-timing-function: linear;
+}
+@keyframes shineStar6 {
+  0% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+  52.5% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+  57.5% {
+    background-color: rgb(255, 255, 255);
+    opacity: 1;
+  }
+  62.5% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+  100% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+}
+
+.shineStar7 {
+  position: absolute;
+  height: 2px;
+  width: 2px;
+  border-radius: 100%;
+  box-shadow: 0px 0px 3px rgb(200, 200, 255);
+  animation: shineStar7 20s infinite;
+  animation-timing-function: linear;
+}
+@keyframes shineStar7 {
+  0% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+  62.5% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+  67.5% {
+    background-color: rgb(255, 255, 255);
+    opacity: 1;
+  }
+  72.5% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+  100% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+}
+
+.shineStar8 {
+  position: absolute;
+  height: 2px;
+  width: 2px;
+  border-radius: 100%;
+  box-shadow: 0px 0px 3px rgb(200, 200, 255);
+  animation: shineStar8 20s infinite;
+  animation-timing-function: linear;
+}
+@keyframes shineStar8 {
+  0% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+  75% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+  80% {
+    background-color: rgb(255, 255, 255);
+    opacity: 1;
+  }
+  85% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+  100% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+}
+
+.shineStar9 {
+  position: absolute;
+  height: 2px;
+  width: 2px;
+  border-radius: 100%;
+  box-shadow: 0px 0px 3px rgb(200, 200, 255);
+  animation: shineStar9 20s infinite;
+  animation-timing-function: linear;
+}
+@keyframes shineStar9 {
+  0% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+  87.5% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+  92.5% {
+    background-color: rgb(255, 255, 255);
+    opacity: 1;
+  }
+  97.5% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+  100% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+}
+
+.shineStar10 {
+  position: absolute;
+  height: 2px;
+  width: 2px;
+  border-radius: 100%;
+  box-shadow: 0px 0px 3px rgb(200, 200, 255);
+  animation: shineStar10 20s infinite;
+  animation-timing-function: linear;
+}
+@keyframes shineStar10 {
+  0% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+  87.5% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+  92.5% {
+    background-color: rgb(255, 255, 255);
+    opacity: 1;
+  }
+  97.5% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+  100% {
+    background-color: rgb(200, 200, 255, 0.75);
+    opacity: 0.5;
+  }
+}
+
+.shootingStar1 {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  border-radius: 100%;
+  box-shadow: 0px 0px 2px rgb(255, 255, 200);
+  background-color: rgb(255, 255, 200);
+  animation: shootingStar1 0.5s;
+  animation-timing-function: linear;
+}
+
+@keyframes shootingStar1 {
+  0% {
+    opacity: 0;
+    top: 0vh;
+    left: 200px;
+  }
+  10% {
+    opacity: 1;
+    top: 10vh;
+    left: 210px;
+  }
+  90% {
+    top: 90vh;
+    left: 290px;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 99vh;
+    left: 300px;
+  }
+}
+
+.meteor1 {
+  transform: rotate(25deg);
+  height: 200px;
+  width: 2px;
+  background-image: linear-gradient(rgb(0, 0, 25, 0.5), rgb(255, 50, 0));
+  background-size: 100% 150%;
+  position: absolute;
+  animation: meteor1drop 20s infinite;
+  animation-timing-function: linear;
+}
+@keyframes meteor1drop {
+  0% {
+    opacity: 0;
+    top: 0vh;
+    left: 60vw;
+  }
+  2.5% {
+    opacity: 0.25;
+  }
+  45% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0;
+    top: calc(100vh - 200px);
+    left: 40vw;
+  }
+  100% {
+    opacity: 0;
+    top: calc(100vh - 200px);
+    left: 40vw;
+  }
+}
+@keyframes moveStar {
+  from {
+    top: 0vh;
+  }
+  to {
+    top: 100vh;
+  }
+}
+
+.planet {
+  z-index: 2;
+  opacity: 1;
+  background-size: 500% 100%;
+  background-image: linear-gradient(
+    to right,
+    rgb(165, 80, 0),
+    rgb(10, 0, 0),
+    rgb(165, 80, 0)
+  );
+  border-radius: 100%;
+  position: absolute;
+  top: 70vh;
+  left: 50vw;
+  animation: planetOrbit 10s infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes planetOrbit {
+  0% {
+    background-position: 70% 0%;
+    opacity: 1;
+    height: 5px;
+    width: 5px;
+    top: calc(50vh - 5px);
+    left: calc(50vw - 105px);
+  }
+  25% {
+    background-position: 50% 0%;
+    height: 7.5px;
+    width: 7.5px;
+    top: calc(50vh - 5px);
+    left: calc(50vw - 5px);
+  }
+  50% {
+    background-position: 30% 0%;
+    height: 5px;
+    width: 5px;
+    top: calc(50vh - 5px);
+    left: calc(50vw + 105px);
+  }
+  70% {
+    opacity: 1;
+  }
+  71% {
+    background-position: 0% 0%;
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+    height: 2.5px;
+    width: 2.5px;
+    top: calc(50vh - 5px);
+    left: calc(50vw - 5px);
+  }
+  78% {
+    background-position: 100% 0%;
+    opacity: 0;
+  }
+  79% {
+    opacity: 1;
+  }
+  100% {
+    background-position: 70% 0%;
+    opacity: 1;
+    height: 5px;
+    width: 5px;
+    top: calc(50vh - 5px);
+    left: calc(50vw - 105px);
+  }
+}
